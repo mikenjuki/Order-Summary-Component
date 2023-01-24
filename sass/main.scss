@@ -1,0 +1,204 @@
+// Font
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$mainFont: "Red Hat Display", sans-serif;
+$fontWeightOne: 500;
+$fontWeightTwo: 700;
+$fontWeightThree: 900;
+$mainFontSize: 1rem;
+
+// Colors
+
+// Primary
+$mainWhite: hsl(0, 0%, 100%);
+$paleBlue: hsl(225, 100%, 94%);
+$brightBlue: hsl(245, 75%, 52%);
+
+// Neutral
+$veryPaleBlue: hsl(225, 100%, 98%);
+$desaturatedBlue: hsl(224, 23%, 55%);
+$hoverBlue: hsla(245, 81%, 71%, 0.912);
+$darkBlue: hsl(223, 47%, 23%);
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+    2. Remove default margin
+  */
+* {
+  margin: 0;
+}
+/*
+    3. Allow percentage-based heights in the application
+  */
+html,
+body {
+  height: 100vh;
+  font-family: $mainFont;
+}
+/*
+    Typographic tweaks!
+    4. Add accessible line-height
+    5. Improve text rendering
+  */
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+    6. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+    7. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+    8. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+/*
+    9. Create a root stacking context
+  */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+/**/
+/*Custom styles*/
+body {
+  background: url(../images/pattern-background-mobile.svg) no-repeat;
+  background-size: cover;
+}
+
+main {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Card component*/
+.card-container {
+  height: 96%;
+  width: 90%;
+  background-color: $mainWhite;
+  border-radius: 12px;
+  overflow: hidden;
+
+  .card_image-container {
+    height: 40%;
+    width: 100%;
+
+    .card_image {
+      height: 100%;
+      width: 100%;
+      background: url(../images/illustration-hero.svg) no-repeat;
+      background-origin: content-box;
+      background-position: 30% 0;
+    }
+  }
+  .card_copy-container {
+    text-align: center;
+    display: grid;
+    grid-template-rows: 40px 72px 72px 50px 30px;
+    row-gap: 8px;
+    padding: 20px 30px 10px;
+
+    .card_copy-heading {
+      color: $darkBlue;
+      font-size: 1.5rem;
+      font-weight: $fontWeightThree;
+    }
+    .card_copy-description {
+      font-size: $mainFontSize;
+      color: $desaturatedBlue;
+      text-align: center;
+    }
+    .card_copy-highlight-section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: $veryPaleBlue;
+      border-radius: 12px;
+      margin-bottom: 12px;
+
+      .highlight-section_icon {
+        background: url(../images/icon-music.svg) no-repeat;
+        height: 50px;
+        width: 50px;
+        border-radius: 50%;
+      }
+      .highlight-section_plan > h6 {
+        font-weight: $fontWeightThree;
+        font-size: 0.875rem;
+        color: $darkBlue;
+      }
+      .highlight-section_plan > p {
+        font-weight: $fontWeightOne;
+        font-size: 0.8125rem;
+        color: $desaturatedBlue;
+      }
+      .highlight-section_link > a {
+        color: $brightBlue;
+        font-size: 12px;
+        font-weight: $fontWeightThree;
+
+        &:hover {
+          text-decoration: none;
+          color: $hoverBlue;
+        }
+      }
+    }
+
+    .btn-primary {
+      background-color: $brightBlue;
+      color: $mainWhite;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 2px 10px 10px $paleBlue;
+
+      &:hover {
+        background-color: $hoverBlue;
+      }
+    }
+
+    .cancel-btn {
+      color: $desaturatedBlue;
+      font-size: 0.8125rem;
+      font-weight: $fontWeightThree;
+      margin-top: 12px;
+
+      &:hover {
+        color: $darkBlue;
+      }
+    }
+  }
+}
