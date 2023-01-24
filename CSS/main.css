@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+/*Breakpoint*/
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -80,15 +81,16 @@ h6 {
 /**/
 /*Custom styles*/
 body {
-  background: url(../images/pattern-background-mobile.svg) no-repeat;
-  background-size: cover;
+  background-color: hsl(225deg, 100%, 98%);
 }
 
 main {
-  height: 100%;
+  height: 96%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(../images/pattern-background-mobile.svg) no-repeat;
+  background-size: 500px 300px;
 }
 
 /*Card component*/
@@ -98,6 +100,7 @@ main {
   background-color: hsl(0deg, 0%, 100%);
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 3px 10px 8px hsl(225deg, 100%, 94%);
 }
 .card-container .card_image-container {
   height: 40%;
@@ -107,13 +110,13 @@ main {
   height: 100%;
   width: 100%;
   background: url(../images/illustration-hero.svg) no-repeat;
-  background-origin: content-box;
-  background-position: 30% 0;
+  background-size: cover;
+  background-position: 30% 30%;
 }
 .card-container .card_copy-container {
   text-align: center;
   display: grid;
-  grid-template-rows: 40px 72px 72px 50px 30px;
+  grid-template-rows: 40px 72px 80px 50px 30px;
   row-gap: 8px;
   padding: 20px 30px 10px;
 }
@@ -129,7 +132,7 @@ main {
 }
 .card-container .card_copy-container .card_copy-highlight-section {
   display: flex;
-  justify-content: space-around;
+  padding: 20px;
   align-items: center;
   background-color: hsl(225deg, 100%, 98%);
   border-radius: 12px;
@@ -140,6 +143,10 @@ main {
   height: 50px;
   width: 50px;
   border-radius: 50%;
+  margin-right: 4%;
+}
+.card-container .card_copy-container .card_copy-highlight-section .highlight-section_plan {
+  margin-right: 44%;
 }
 .card-container .card_copy-container .card_copy-highlight-section .highlight-section_plan > h6 {
   font-weight: 900;
@@ -175,9 +182,40 @@ main {
   font-size: 0.8125rem;
   font-weight: 900;
   margin-top: 12px;
+  margin-bottom: 12px;
 }
 .card-container .card_copy-container .cancel-btn:hover {
   color: hsl(223deg, 47%, 23%);
+}
+
+/* Footer */
+.footer_attribution-copy {
+  text-align: center;
+  font-size: 1rem;
+  color: hsl(223deg, 47%, 23%);
+}
+.footer_attribution-copy a {
+  color: hsl(245deg, 75%, 52%);
+}
+.footer_attribution-copy a:hover {
+  text-decoration: none;
+  color: hsla(245deg, 81%, 71%, 0.912);
+}
+
+/* 1440 Breakpoint */
+@media (min-width: 1440px) {
+  body {
+    background-color: hsl(225deg, 100%, 94%);
+  }
+  main {
+    background: url(../images/pattern-background-desktop.svg) no-repeat;
+    background-size: 100% 400px;
+  }
+  /*Card component*/
+  .card-container {
+    height: 86%;
+    width: 30%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

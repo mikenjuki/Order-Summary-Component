@@ -20,6 +20,9 @@ $desaturatedBlue: hsl(224, 23%, 55%);
 $hoverBlue: hsla(245, 81%, 71%, 0.912);
 $darkBlue: hsl(223, 47%, 23%);
 
+/*Breakpoint*/
+$breakpoint-tablet: 1440px;
+
 /*
   1. Use a more-intuitive box-sizing model.
 */
@@ -94,15 +97,16 @@ h6 {
 /**/
 /*Custom styles*/
 body {
-  background: url(../images/pattern-background-mobile.svg) no-repeat;
-  background-size: cover;
+  background-color: $veryPaleBlue;
 }
 
 main {
-  height: 100%;
+  height: 96%;
   display: flex;
   justify-content: center;
   align-items: center;
+  background: url(../images/pattern-background-mobile.svg) no-repeat;
+  background-size: 500px 300px;
 }
 
 /*Card component*/
@@ -112,6 +116,7 @@ main {
   background-color: $mainWhite;
   border-radius: 12px;
   overflow: hidden;
+  box-shadow: 3px 10px 8px $paleBlue;
 
   .card_image-container {
     height: 40%;
@@ -121,14 +126,14 @@ main {
       height: 100%;
       width: 100%;
       background: url(../images/illustration-hero.svg) no-repeat;
-      background-origin: content-box;
-      background-position: 30% 0;
+      background-size: cover;
+      background-position: 30% 30%;
     }
   }
   .card_copy-container {
     text-align: center;
     display: grid;
-    grid-template-rows: 40px 72px 72px 50px 30px;
+    grid-template-rows: 40px 72px 80px 50px 30px;
     row-gap: 8px;
     padding: 20px 30px 10px;
 
@@ -144,7 +149,8 @@ main {
     }
     .card_copy-highlight-section {
       display: flex;
-      justify-content: space-around;
+      //justify-content: space-around;
+      padding: 20px;
       align-items: center;
       background-color: $veryPaleBlue;
       border-radius: 12px;
@@ -155,6 +161,10 @@ main {
         height: 50px;
         width: 50px;
         border-radius: 50%;
+        margin-right: 4%;
+      }
+      .highlight-section_plan {
+        margin-right: 44%;
       }
       .highlight-section_plan > h6 {
         font-weight: $fontWeightThree;
@@ -195,10 +205,43 @@ main {
       font-size: 0.8125rem;
       font-weight: $fontWeightThree;
       margin-top: 12px;
+      margin-bottom: 12px;
 
       &:hover {
         color: $darkBlue;
       }
     }
+  }
+}
+
+/* Footer */
+.footer_attribution-copy {
+  text-align: center;
+  font-size: $mainFontSize;
+  color: $darkBlue;
+  a {
+    color: $brightBlue;
+    &:hover {
+      text-decoration: none;
+      color: $hoverBlue;
+    }
+  }
+}
+
+/* 1440 Breakpoint */
+@media (min-width: $breakpoint-tablet) {
+  body {
+    background-color: $paleBlue;
+  }
+
+  main {
+    background: url(../images/pattern-background-desktop.svg) no-repeat;
+    background-size: 100% 400px;
+  }
+
+  /*Card component*/
+  .card-container {
+    height: 86%;
+    width: 30%;
   }
 }
