@@ -106,7 +106,7 @@ main {
   justify-content: center;
   align-items: center;
   background: url(../images/pattern-background-mobile.svg) no-repeat;
-  background-size: 500px 300px;
+  background-size: 100% 300px;
 }
 
 /*Card component*/
@@ -149,7 +149,6 @@ main {
     }
     .card_copy-highlight-section {
       display: flex;
-      //justify-content: space-around;
       padding: 20px;
       align-items: center;
       background-color: $veryPaleBlue;
@@ -180,6 +179,7 @@ main {
         color: $brightBlue;
         font-size: 12px;
         font-weight: $fontWeightThree;
+        cursor: pointer;
 
         &:hover {
           text-decoration: none;
@@ -194,6 +194,7 @@ main {
       border: none;
       border-radius: 12px;
       box-shadow: 2px 10px 10px $paleBlue;
+      cursor: pointer;
 
       &:hover {
         background-color: $hoverBlue;
@@ -206,6 +207,8 @@ main {
       font-weight: $fontWeightThree;
       margin-top: 12px;
       margin-bottom: 12px;
+      text-decoration: none;
+      cursor: pointer;
 
       &:hover {
         color: $darkBlue;

@@ -90,7 +90,7 @@ main {
   justify-content: center;
   align-items: center;
   background: url(../images/pattern-background-mobile.svg) no-repeat;
-  background-size: 500px 300px;
+  background-size: 100% 300px;
 }
 
 /*Card component*/
@@ -162,6 +162,7 @@ main {
   color: hsl(245deg, 75%, 52%);
   font-size: 12px;
   font-weight: 900;
+  cursor: pointer;
 }
 .card-container .card_copy-container .card_copy-highlight-section .highlight-section_link > a:hover {
   text-decoration: none;
@@ -173,6 +174,7 @@ main {
   border: none;
   border-radius: 12px;
   box-shadow: 2px 10px 10px hsl(225deg, 100%, 94%);
+  cursor: pointer;
 }
 .card-container .card_copy-container .btn-primary:hover {
   background-color: hsla(245deg, 81%, 71%, 0.912);
@@ -183,6 +185,8 @@ main {
   font-weight: 900;
   margin-top: 12px;
   margin-bottom: 12px;
+  text-decoration: none;
+  cursor: pointer;
 }
 .card-container .card_copy-container .cancel-btn:hover {
   color: hsl(223deg, 47%, 23%);
