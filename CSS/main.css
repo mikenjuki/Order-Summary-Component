@@ -131,22 +131,26 @@ main {
   text-align: center;
 }
 .card-container .card_copy-container .card_copy-highlight-section {
-  display: flex;
-  padding: 20px;
+  display: grid;
+  grid-template-columns: 50px 140px 50px;
+  grid-template-rows: auto;
   align-items: center;
+  justify-content: center;
+  column-gap: 8px;
+  padding: 10px 16px;
   background-color: hsl(225deg, 100%, 98%);
   border-radius: 12px;
   margin-bottom: 12px;
+  overflow: hidden;
 }
 .card-container .card_copy-container .card_copy-highlight-section .highlight-section_icon {
   background: url(../images/icon-music.svg) no-repeat;
   height: 50px;
   width: 50px;
   border-radius: 50%;
-  margin-right: 4%;
 }
 .card-container .card_copy-container .card_copy-highlight-section .highlight-section_plan {
-  margin-right: 44%;
+  margin-right: 40%;
 }
 .card-container .card_copy-container .card_copy-highlight-section .highlight-section_plan > h6 {
   font-weight: 900;

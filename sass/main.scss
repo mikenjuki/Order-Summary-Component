@@ -148,22 +148,26 @@ main {
       text-align: center;
     }
     .card_copy-highlight-section {
-      display: flex;
-      padding: 20px;
+      display: grid;
+      grid-template-columns: 50px 140px 50px;
+      grid-template-rows: auto;
       align-items: center;
+      justify-content: center;
+      column-gap: 8px;
+      padding: 10px 16px;
       background-color: $veryPaleBlue;
       border-radius: 12px;
       margin-bottom: 12px;
+      overflow: hidden;
 
       .highlight-section_icon {
         background: url(../images/icon-music.svg) no-repeat;
         height: 50px;
         width: 50px;
         border-radius: 50%;
-        margin-right: 4%;
       }
       .highlight-section_plan {
-        margin-right: 44%;
+        margin-right: 40%;
       }
       .highlight-section_plan > h6 {
         font-weight: $fontWeightThree;
