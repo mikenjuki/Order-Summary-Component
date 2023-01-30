@@ -29,7 +29,7 @@ Users should be able to:
 
 ## My process
 
-I chose to use sass in this particular project.
+I chose to use scss in this particular project.
 The process was one I have refined.
 Starts with going over the style guide and taking note of the requirements.
 Setting up the necessary assets and tools I need.
